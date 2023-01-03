@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes Final Project</title>
+    <style>
+      body {
+        background: linear-gradient(#632626dc, rgb(224, 201, 201));
+      }
+      div {
+        text-align: center;
+        font-size: large;
+        line-height: 1.2;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 3px 30px;
+        background: linear-gradient(rgb(224, 201, 201), #632626e7);
+        border-radius: 3%;
+        box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.2);
+      }
+      img {
+        margin: 0px 5px;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+        width: 200px;
+        height: 150px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+      }
+      li {
+        display: inline;
+        padding: 0px 15px;
+      }
+      button {
+        background: transparent;
+        color: rgb(224, 201, 201);
+        font-weight: bolder;
+        border-radius: 25px;
+        margin: 20px auto;
+        border: 1px solid rgb(224, 201, 201);
+        box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.2);
+        transition: all 150ms ease-in-out;
+        font-size: 16px;
+        padding: 15px 20px;
+      }
+      button:hover {
+        background: rgb(224, 201, 201);
+        color: #632626;
+        cursor: pointer;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .footer {
+        font-size: 18px;
+        opacity: 0.7;
+        text-align: center;
+        font-family: monospace;
+        color: rgb(197, 187, 175);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>ღვინო</h1>
+      <h2>
+        <em>Georgian wine</em>
+      </h2>
+      <hr />
+      <ul>
+        <li>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/069/original/54-2-1623573780.jpg?1652305507"
+            alt="wine"
+          />
+        </li>
+        <li>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/062/original/4697236_orig.jpg?1652304942"
+            alt="kvevri"
+          />
+        </li>
+        <li>
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/058/original/2da9jea-e1622047131329.jpg?1652302422"
+            alt="marani"
+          />
+        </li>
+      </ul>
+      <hr />
+      <p class="pargraph">
+        <strong>Georgia</strong> is one of the oldest wine regions in the world.
+        The fertile valleys and protective slopes of the Transcaucasia were home
+        to grapevine cultivation and neolithic wine production (Georgian: ღვინო,
+        ɣvino) for at least 8000 years.Due to the many millennia of wine in
+        Georgian history and its prominent economic role, the traditions of wine
+        are considered entwined with and inseparable from the national identity.
+        <br /><br />
+        Among the best-known Georgian wine regions are Kakheti (further divided
+        into the micro-regions of Telavi and Kvareli), Kartli, Imereti,
+        Racha-Lechkhumi and Kvemo Svaneti, Adjara and Abkhazia. <br />
+        <br />
+        <strong>In 2013, UNESCO</strong> added the ancient traditional Georgian
+        winemaking method using the Kvevri clay jars to the UNESCO Intangible
+        Cultural Heritage Lists.
+      </p>
+
+      <a href="https://en.wikipedia.org/wiki/Georgian_wine" target="_blank">
+        <strong> <em>Read more</em></strong>
+      </a>
+      <br />
+      <button>🍷 Book Wine Tasting Tour</button>
+      <p class="footer">Page built by Tamari Pilia</p>
+    </div>
+    <script>
+      function verdict() {
+        let heading = document.querySelector("h1");
+        let name = prompt("What is your name?");
+        let age = prompt("how old are you?");
+        if (age >= 18) {
+          heading.innerHTML =
+            "🤗 Welcome " + name + ", we will contact you soon";
+        } else {
+          heading.innerHTML =
+            "🙈 Sorry " + name + ", you can not book wine tasting tour";
+        }
+      }
+      let bookWineTastingButton = document.querySelector("button");
+      bookWineTastingButton.addEventListener("click", verdict);
+    </script>
+  </body>
+</html>
